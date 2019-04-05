@@ -1,6 +1,6 @@
 # grafana-cli [![GitHub license](https://img.shields.io/github/license/m0nhawk/grafana_api.svg?style=flat-square)](https://github.com/JeferCatarina/grafana-cli/blob/master/LICENSE) 
 
-## What a heck is that?
+## What the heck is that?
 
 Grafana-CLI is a Python library used to manage Grafana API
 
@@ -87,5 +87,5 @@ ga.DashboardUpload('/tmp/mydash.json, FolderId=3'
 
 ## License
 
-Grafana-CLI is licensed under the terms of the MIT License (see the file
-[LICENSE](LICENSE)).
+Grafana-CLI is licensed under the terms of the MIT License (see the
+[LICENSE](LICENSE) file).

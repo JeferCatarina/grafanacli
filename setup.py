@@ -18,7 +18,6 @@ setup(name='grafana-cli',
       packages=find_packages(),
       install_requires=[
           'requests',
-          'json',
       ],
       classifiers=[
           'Development Status :: 3 - Alpha',
