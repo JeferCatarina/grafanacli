@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: grafanacli
-Version: 1.0.4
+Version: 1.0.5
 Summary: Library to manage Grafana API
 Home-page: https://github.com/JeferCatarina/grafanacli
 Author: Jeferson Catarina
@@ -34,7 +34,7 @@ Description: # grafanacli [![GitHub license](https://img.shields.io/github/licen
         
         # Disable SSL verification
         ga.verify = False
-        SSL verification must by disabled after use GrafanaAuth
+        SSL verification must by disabled before use GrafanaAuth
         
         # Authentication using username and password
         ga.GrafanaAuth(Username='admin', Password='admin')
