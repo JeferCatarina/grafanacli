@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: grafana-cli
-Version: 1.0.1.dev2
+Version: 1.0.4
 Summary: Library to manage Grafana-API
 Home-page: https://github.com/JeferCatarina/grafana-cli
 Author: Jeferson Catarina

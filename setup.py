@@ -7,7 +7,7 @@ with open(path.join(here, 'README.md')) as f:
     long_description = f.read()
 
 setup(name='grafana-cli',
-      version='1.0.1.dev2',
+      version='1.0.4',
       description='Library to manage Grafana-API',
       long_description=long_description,
       long_description_content_type='text/markdown',

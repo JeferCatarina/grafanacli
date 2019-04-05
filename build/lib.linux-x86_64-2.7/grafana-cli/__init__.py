@@ -1,10 +1,3 @@
-#!/usr/bin/env python
-# -*- encoding: utf-8 -*-
-
-"""
-Written by catarinajeferson@gmail.com
-"""
-
 import json
 import requests
 
