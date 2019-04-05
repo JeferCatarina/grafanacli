@@ -1,4 +1,4 @@
-# grafanacli [![GitHub license](https://img.shields.io/github/license/m0nhawk/grafana_api.svg?style=flat-square)](https://github.com/JeferCatarina/grafanacli/blob/master/LICENSE) 
+# grafanacli [![GitHub license](https://img.shields.io/github/license/JeferCatarina/grafanacli.svg?style=flat-square)](https://github.com/JeferCatarina/grafanacli/blob/master/LICENSE) 
 
 ## What the heck is that?
 
