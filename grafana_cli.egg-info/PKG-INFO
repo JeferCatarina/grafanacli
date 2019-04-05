@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: grafana-cli
-Version: 1.0.0.dev1
+Version: 1.0.1.dev2
 Summary: Library to manage Grafana-API
 Home-page: https://github.com/JeferCatarina/grafana-cli
 Author: Jeferson Catarina
@@ -8,7 +8,7 @@ Author-email: catarinajeferson@gmail.com
 License: MIT
 Description: # grafana-cli [![GitHub license](https://img.shields.io/github/license/m0nhawk/grafana_api.svg?style=flat-square)](https://github.com/JeferCatarina/grafana-cli/blob/master/LICENSE) 
         
-        ## What a heck is that?
+        ## What the heck is that?
         
         Grafana-CLI is a Python library used to manage Grafana API
         
@@ -95,8 +95,8 @@ Description: # grafana-cli [![GitHub license](https://img.shields.io/github/lice
         
         ## License
         
-        Grafana-CLI is licensed under the terms of the MIT License (see the file
-        [LICENSE](LICENSE)).
+        Grafana-CLI is licensed under the terms of the MIT License (see the
+        [LICENSE](LICENSE) file).
 Platform: UNKNOWN
 Classifier: Development Status :: 3 - Alpha
 Classifier: Intended Audience :: Developers
