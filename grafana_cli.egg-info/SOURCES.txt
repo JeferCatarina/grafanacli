@@ -1,0 +1,8 @@
+README.md
+setup.py
+grafana-cli/__init__.py
+grafana_cli.egg-info/PKG-INFO
+grafana_cli.egg-info/SOURCES.txt
+grafana_cli.egg-info/dependency_links.txt
+grafana_cli.egg-info/requires.txt
+grafana_cli.egg-info/top_level.txt
