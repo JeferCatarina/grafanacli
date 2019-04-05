@@ -15,7 +15,7 @@ class GrafanaAdmin(object):
 				if key in kwargs:
 					setattr(self, key, kwargs[key])
 				else:
-					return('Using "Normal" as "AuthType", is mandatory set "Username" and "Password". {0} is not configured.'.format(key))
+					return('Using "Normal" as "AuthType", is mandatory to set "Username" and "Password". {0} is not configured.'.format(key))
 			s = requests.Session()
 			s.auth = (self.Username, self.Password)
 			s.verify = self.verify
@@ -25,7 +25,7 @@ class GrafanaAdmin(object):
 			if 'Key' in kwargs:
 				setattr(self, 'Key', kwargs['Key'])
 			else:
-				return('Using "APIKey" as "AuthType", is mandatory set "Key". {0} is not configured.'.format(key))
+				return('Using "APIKey" as "AuthType", is mandatory to set "Key". {0} is not configured.'.format(key))
 			s = requests.Session()
 			s.headers.update({'Authorization': 'Bearer {0}'.format(self.Key)})
 			s.verify = self.verify
