@@ -26,7 +26,7 @@ ga = GrafanaAdmin('http://127.0.0.1:3000')
 
 # Disable SSL verification
 ga.verify = False
-SSL verification must by disabled after use GrafanaAuth
+SSL verification must by disabled before use GrafanaAuth
 
 # Authentication using username and password
 ga.GrafanaAuth(Username='admin', Password='admin')
