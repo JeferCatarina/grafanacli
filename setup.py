@@ -6,12 +6,12 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.md')) as f:
     long_description = f.read()
 
-setup(name='grafana-cli',
+setup(name='grafanacli',
       version='1.0.4',
-      description='Library to manage Grafana-API',
+      description='Library to manage Grafana API',
       long_description=long_description,
       long_description_content_type='text/markdown',
-      url='https://github.com/JeferCatarina/grafana-cli',
+      url='https://github.com/JeferCatarina/grafanacli',
       author='Jeferson Catarina',
       author_email='catarinajeferson@gmail.com',
       license='MIT',

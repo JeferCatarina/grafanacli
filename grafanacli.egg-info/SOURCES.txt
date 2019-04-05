@@ -1,0 +1,8 @@
+README.md
+setup.py
+grafanacli/__init__.py
+grafanacli.egg-info/PKG-INFO
+grafanacli.egg-info/SOURCES.txt
+grafanacli.egg-info/dependency_links.txt
+grafanacli.egg-info/requires.txt
+grafanacli.egg-info/top_level.txt

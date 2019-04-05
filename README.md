@@ -1,8 +1,8 @@
-# grafana-cli [![GitHub license](https://img.shields.io/github/license/m0nhawk/grafana_api.svg?style=flat-square)](https://github.com/JeferCatarina/grafana-cli/blob/master/LICENSE) 
+# grafanacli [![GitHub license](https://img.shields.io/github/license/m0nhawk/grafana_api.svg?style=flat-square)](https://github.com/JeferCatarina/grafanacli/blob/master/LICENSE) 
 
 ## What the heck is that?
 
-Grafana-CLI is a Python library used to manage Grafana API
+GrafanaCLI is a Python library used to manage Grafana API
 
 ## Requirements
 
@@ -14,13 +14,13 @@ Python :: 3
 Install the pip package:
 
 ```
-pip install grafana-cli
+pip install grafanacli
 ```
 
 ## Usage
 
 ```python
-from grafana-cli import GrafanaAdmin
+from grafanacli import GrafanaAdmin
 
 ga = GrafanaAdmin('http://127.0.0.1:3000')
 
@@ -87,5 +87,5 @@ ga.DashboardUpload('/tmp/mydash.json, FolderId=3'
 
 ## License
 
-Grafana-CLI is licensed under the terms of the MIT License (see the
+GrafanaCLI is licensed under the terms of the MIT License (see the
 [LICENSE](LICENSE) file).

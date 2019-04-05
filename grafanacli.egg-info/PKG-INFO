@@ -1,16 +1,16 @@
 Metadata-Version: 2.1
-Name: grafana-cli
+Name: grafanacli
 Version: 1.0.4
-Summary: Library to manage Grafana-API
-Home-page: https://github.com/JeferCatarina/grafana-cli
+Summary: Library to manage Grafana API
+Home-page: https://github.com/JeferCatarina/grafanacli
 Author: Jeferson Catarina
 Author-email: catarinajeferson@gmail.com
 License: MIT
-Description: # grafana-cli [![GitHub license](https://img.shields.io/github/license/m0nhawk/grafana_api.svg?style=flat-square)](https://github.com/JeferCatarina/grafana-cli/blob/master/LICENSE) 
+Description: # grafanacli [![GitHub license](https://img.shields.io/github/license/m0nhawk/grafana_api.svg?style=flat-square)](https://github.com/JeferCatarina/grafanacli/blob/master/LICENSE) 
         
         ## What the heck is that?
         
-        Grafana-CLI is a Python library used to manage Grafana API
+        GrafanaCLI is a Python library used to manage Grafana API
         
         ## Requirements
         
@@ -22,13 +22,13 @@ Description: # grafana-cli [![GitHub license](https://img.shields.io/github/lice
         Install the pip package:
         
         ```
-        pip install grafana-cli
+        pip install grafanacli
         ```
         
         ## Usage
         
         ```python
-        from grafana-cli import GrafanaAdmin
+        from grafanacli import GrafanaAdmin
         
         ga = GrafanaAdmin('http://127.0.0.1:3000')
         
@@ -95,7 +95,7 @@ Description: # grafana-cli [![GitHub license](https://img.shields.io/github/lice
         
         ## License
         
-        Grafana-CLI is licensed under the terms of the MIT License (see the
+        GrafanaCLI is licensed under the terms of the MIT License (see the
         [LICENSE](LICENSE) file).
 Platform: UNKNOWN
 Classifier: Development Status :: 3 - Alpha
