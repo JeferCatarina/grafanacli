@@ -96,3 +96,20 @@ class GrafanaAdmin(object):
 		json_data = { "folderId": FolderId, "overwrite": Overwrite, "dashboard": json_content }	
 		run = self.Session.post('{0}/api/dashboards/db'.format(self.url), json=json_data)
 		return(run.json())
+
+	def DashboardGet(self, DashboardUid):
+		run = self.Session.get('{0}/api/dashboards/uid/{1}'.format(self.url, DashboardUid))
+		return(run.json())
+
+	def DashboardDelete(self, DashboardUid):
+		run = self.Session.delete('{0}/api/dashboards/uid/{1}'.format(self.url, DashboardUid))
+		return(run.json())
+
+	def DashboardHome(self):
+		run = self.Session.get('{0}/api/dashboards/home'.format(self.url))
+		return(run.json())
+
+	def DashboardTags(self):
+		run = self.Session.get('{0}/api/dashboards/tags'.format(self.url))
+		return(run.json())
+		
