@@ -64,6 +64,24 @@ class GrafanaAdmin(object):
 		run = self.Session.post('{0}/api/user/using/{1}'.format(self.url, orgId))	
 		return(run.json())
 
+	def OrganizationGetUsers(self, orgId):
+		run = self.Session.get('{0}/api/orgs/{1}/users'.format(self.url, orgId))	
+		return(run.json())
+
+	def OrganizationAddUser(self, orgId, loginOrEmail, role):
+		json_data = {"loginOrEmail":"{0}".format(loginOrEmail), "role":"{0}".format(role)}
+		run = self.Session.post('{0}/api/orgs/{1}/users'.format(self.url, orgId), json=json_data)	
+		return(run.json())
+
+	def OrganizationUpdateUser(self, orgId, userId, role):
+		json_data = {"role":"{0}".format(role)}
+		run = self.Session.patch('{0}/api/orgs/{1}/users/{2}'.format(self.url, orgId, userId), data=json_data)	
+		return(run.json())
+
+	def OrganizationDeleteUser(self, orgId, userId):
+		run = self.Session.delete('{0}/api/orgs/{1}/users/{2}'.format(self.url, orgId, userId))	
+		return(run.json())
+
 	def DashboardSearch(self, **kwargs):
 		url_search = self.url + '/api/search?type=dash-db'
 		for key in ('DashboardName', 'Tag', 'Starred'):
@@ -113,3 +131,32 @@ class GrafanaAdmin(object):
 		run = self.Session.get('{0}/api/dashboards/tags'.format(self.url))
 		return(run.json())
 		
+	def GlobalUserAdd(self, name, email, login, password):
+		json_data = {"name":"{0}".format(name), 
+						"email":"{0}".format(email),
+						"login":"{0}".format(login),
+						"password":"{0}".format(password)}
+		run = self.Session.post('{0}/api/admin/users'.format(self.url), json=json_data)
+		return(run.json())
+
+	def GlobalUserUpdatePassword(self, userId, newPassword):
+		json_data = {"password":"{0}".format(newPassword)}
+		run = self.Session.put('{0}/api/admin/users/{1}/password'.format(self.url, userId), json=json_data)
+		return(run.json())
+
+	def GlobalUserGrafanaAdmin(self, userId, grafanaAdmin=False):
+		json_data = {"isGrafanaAdmin":grafanaAdmin}
+		run = self.Session.put('{0}/api/admin/users/{1}/permissions'.format(self.url, userId), json=json_data)
+		return(run.json())
+
+	def GlobalUserDelete(self, userId):
+		run = self.Session.delete('{0}/api/admin/users/{1}'.format(self.url, userId))
+		return(run.json())
+
+	def GlobalUserList(self):
+		run = self.Session.get('{0}/api/users'.format(self.url))
+		return(run.json())
+
+	def GlobalUserSearch(self, loginOrEmail):
+		run = self.Session.get('{0}/api/users/lookup?loginOrEmail={1}'.format(self.url, loginOrEmail))
+		return(run.json())
