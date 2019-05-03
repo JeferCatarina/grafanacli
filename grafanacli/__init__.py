@@ -160,3 +160,28 @@ class GrafanaAdmin(object):
 	def GlobalUserSearch(self, loginOrEmail):
 		run = self.Session.get('{0}/api/users/lookup?loginOrEmail={1}'.format(self.url, loginOrEmail))
 		return(run.json())
+
+	def DatasourceList(self):
+		run = self.Session.get('{0}/api/datasources'.format(self.url))
+		return(run.json())
+
+	def DatasourceGet(self, dsId):
+		run = self.Session.get('{0}/api/datasources/{1}'.format(self.url, dsId))
+		return(run.json())
+
+	def DatasourceCreate(self, ds_json):
+		run = self.Session.post('{0}/api/datasources'.format(self.url), json=ds_json)
+		return(run.json())	
+
+	def DatasourceUpdate(self, dsId, ds_json):
+		run = self.Session.put('{0}/api/datasources/{1}'.format(self.url, dsId), json=ds_json)
+		return(run.json())
+
+	def DatasourceDelete(self, dsId):
+		run = self.Session.delete('{0}/api/datasources/{1}'.format(self.url, dsId))
+		return(run.json())
+
+	def ZabbixPlugin(self, Enabled=True):
+		json_data = {'id': 'alexanderzobnin-zabbix-app', 'enabled': Enabled}
+		run = self.Session.post('{0}/api/plugins/alexanderzobnin-zabbix-app/settings'.format(self.url), json=json_data)
+		return(run.json())
