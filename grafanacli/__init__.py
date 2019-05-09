@@ -82,6 +82,23 @@ class GrafanaAdmin(object):
 		run = self.Session.delete('{0}/api/orgs/{1}/users/{2}'.format(self.url, orgId, userId))	
 		return(run.json())
 
+	def OrganizationGetPreferences(self):
+		run = self.Session.get('{0}/api/org/preferences'.format(self.url))
+		return(run.json())
+
+	def OrganizationUpdatePreferences(self, **kwargs):
+		json_data = {}
+		for key in ('theme', 'homeDashboardId', 'timezone'):
+			if key in kwargs:
+				if key == 'theme':
+					json_data['theme'] = kwargs[key]
+				if key == 'homeDashboardId':
+					json_data['homeDashboardId'] = kwargs[key]
+				if key == 'timezone':
+					json_data['timezone'] = kwargs[key]
+		run = self.Session.put('{0}/api/org/preferences'.format(self.url), json=json_data)
+		return(run.json())
+
 	def DashboardSearch(self, **kwargs):
 		url_search = self.url + '/api/search?type=dash-db'
 		for key in ('DashboardName', 'Tag', 'Starred'):
