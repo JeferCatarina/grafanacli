@@ -147,7 +147,15 @@ class GrafanaAdmin(object):
 	def DashboardTags(self):
 		run = self.Session.get('{0}/api/dashboards/tags'.format(self.url))
 		return(run.json())
-		
+
+	def DashboardGetPermissions(self, DashboardUid):
+		run = self.Session.get('{0}/api/dashboards/id/{1}/permissions'.format(self.url, DashboardUid))
+		return(run.json())
+
+	def DashboardUpdatePermissions(self, DashboardId, permissions):
+		run = self.Session.post('{0}/api/dashboards/id/{1}/permissions'.format(self.url, DashboardId), json=permissions)
+		return(run.json())
+
 	def GlobalUserAdd(self, name, email, login, password):
 		json_data = {"name":"{0}".format(name), 
 						"email":"{0}".format(email),
