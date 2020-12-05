@@ -198,6 +198,19 @@ class GrafanaAdmin(object):
 		run = self.Session.delete('{0}/api/datasources/{1}'.format(self.url, dsId))
 		return(run.json())
 
+	def FolderList(self):
+		run = self.Session.get('{0}/api/folders'.format(self.url))
+		return(run.json())
+
+	def FolderCreate(self, folderName):
+		json_data = {"title": folderName}
+		run = self.Session.post('{0}/api/folders'.format(self.url), json=json_data)
+		return(run.json())
+
+	def FolderDelete(self, fUid):
+		run = self.Session.delete('{0}/api/folders/{1}'.format(self.url, fUid))
+		return(run.json())
+
 	def ZabbixPlugin(self, Enabled=True):
 		json_data = {'id': 'alexanderzobnin-zabbix-app', 'enabled': Enabled}
 		run = self.Session.post('{0}/api/plugins/alexanderzobnin-zabbix-app/settings'.format(self.url), json=json_data)
