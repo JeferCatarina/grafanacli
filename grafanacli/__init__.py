@@ -203,7 +203,7 @@ class GrafanaAdmin(object):
 		return(run.json())
 
 	def FolderCreate(self, folderName):
-		json_data = {"title": folderName}
+		json_data = {"title": "{0}".format(folderName)}
 		run = self.Session.post('{0}/api/folders'.format(self.url), json=json_data)
 		return(run.json())
 
