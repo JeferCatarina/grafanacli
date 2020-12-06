@@ -95,6 +95,10 @@ ga.FolderDelete('folderUID')
 ga.DashboardStar(dashboadID)
 ga.DashboardUnstar(dashboadID) 
 
+# Get and Update Dashboard's permission
+ga.DashboardGetPermissions(dashboadID)
+ga.DashboardUpdatePermissions(dashboadID, new_json_permission)
+
 ```
 
 ## License

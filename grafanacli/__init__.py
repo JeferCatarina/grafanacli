@@ -148,8 +148,8 @@ class GrafanaAdmin(object):
         run = self.Session.get('{0}/api/dashboards/tags'.format(self.url))
         return(run.json())
 
-    def DashboardGetPermissions(self, DashboardUid):
-        run = self.Session.get('{0}/api/dashboards/id/{1}/permissions'.format(self.url, DashboardUid))
+    def DashboardGetPermissions(self, DashboardId):
+        run = self.Session.get('{0}/api/dashboards/id/{1}/permissions'.format(self.url, DashboardId))
         return(run.json())
 
     def DashboardUpdatePermissions(self, DashboardId, permissions):
