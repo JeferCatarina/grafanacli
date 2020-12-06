@@ -166,9 +166,9 @@ class GrafanaAdmin(object):
 
     def GlobalUserAdd(self, name, email, login, password):
         json_data = {"name":"{0}".format(name),
-                     "email":"{0}".format(email),
-                     "login":"{0}".format(login),
-                     "password":"{0}".format(password)}
+                    "email":"{0}".format(email),
+                    "login":"{0}".format(login),
+                    "password":"{0}".format(password)}
         run = self.Session.post('{0}/api/admin/users'.format(self.url), json=json_data)
         return(run.json())
 
@@ -226,7 +226,7 @@ class GrafanaAdmin(object):
     def FolderDelete(self, fUid):
         run = self.Session.delete('{0}/api/folders/{1}'.format(self.url, fUid))
         return(run.json())      
-      
+
     def ZabbixPlugin(self, Enabled=True):
         json_data = {'id': 'alexanderzobnin-zabbix-app', 'enabled': Enabled}
         run = self.Session.post('{0}/api/plugins/alexanderzobnin-zabbix-app/settings'.format(self.url), json=json_data)
