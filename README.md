@@ -83,6 +83,18 @@ ga.DashboardUpload('/tmp/mydash.json', Overwrite=True)
 ga.DashboardUpload('/tmp/mydash.json')
 ga.DashboardUpload('/tmp/mydash.json, FolderId=3'
 
+# Create, List, Get, Update and Delete Folders
+ga.FolderCreate('My Folder')
+ga.FolderList()
+ga.FolderGet('folderUID')
+ga.FolderUpdate('folderUID', 'My Folder New Name', version=x) # Current Folder's version ID (int)
+ga.FolderUpdate('folderUID', 'My Folder New Name', overwrite=True) # It will skip version confirmation
+ga.FolderDelete('folderUID')
+
+# Star and Unstar a dashboard
+ga.DashboardStar(dashboadID)
+ga.DashboardUnstar(dashboadID) 
+
 ```
 
 ## License
