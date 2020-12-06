@@ -218,9 +218,20 @@ class GrafanaAdmin(object):
         run = self.Session.get('{0}/api/folders'.format(self.url))
         return(run.json())
 
+    def FolderGet(self, fUid):
+        run = self.Session.get('{0}/api/folders/{1}'.format(self.url, fUid))
+        return(run.json())
+
     def FolderCreate(self, folderName):
         json_data = {"title": "{0}".format(folderName)}
         run = self.Session.post('{0}/api/folders'.format(self.url), json=json_data)
+        return(run.json())
+
+    def FolderUpdate(self, fUid, folderNewName, overwrite=False, version=None):
+        json_data = {"title": "{0}".format(folderNewName), "overwrite": overwrite}
+        if version:
+            json_data['version'] = version
+        run = self.Session.put('{0}/api/folders/{1}'.format(self.url, fUid), json=json_data)
         return(run.json())
 
     def FolderDelete(self, fUid):
