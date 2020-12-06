@@ -1,6 +1,6 @@
 # grafanacli [![GitHub license](https://img.shields.io/github/license/JeferCatarina/grafanacli.svg?style=flat-square)](https://github.com/JeferCatarina/grafanacli/blob/master/LICENSE) 
 
-## What the heck is that?
+## What the heck is it?
 
 GrafanaCLI is a Python library used to manage Grafana API
 
